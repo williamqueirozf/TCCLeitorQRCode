@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Leitor QRCODE
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div *ngIf="results">
+<p style="text-align:center; font-size:30px;font-family:arial">{{results.text}}</p>
+<!--<p>{{results.format}}</p>
+<p>{{results.cancelled}}</p>-->
+</div>
+<button ion-button (click)="scanBarcode()" align="center">Escanear QRCODE</button>
+
+<!--<button ion-button (click)="encode()" >Encode</button>-->
+</ion-content>
