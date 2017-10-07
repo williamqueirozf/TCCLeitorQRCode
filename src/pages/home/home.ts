@@ -11,7 +11,7 @@ export class HomePage {
 options: BarcodeScannerOptions;
 results:{};
   constructor(private barcode:BarcodeScanner,public navCtrl: NavController) {
-
+//
   }
 
 async scanBarcode(){
