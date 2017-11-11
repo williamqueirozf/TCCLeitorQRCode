@@ -17,15 +17,17 @@ results:{};
 async scanBarcode(){
 
   this.options ={
-    prompt:'Scan a bar code to see the result!'
+    prompt:'Scanear QRCode do usuário'
   }
 
   this. results = await this.barcode.scan(this.options);
-  console.log(this.results);
+  //console.log(this.results);
+  
+  console.log(this.results['text']);//trazendo variavel text do objeto results
   }
 
-  async encodeData(){
+  /*async encodeData(){
     const result=await this.barcode.encode(this.barcode.Encode.TEXT_TYPE,'http://learninionic2.com')
-  }
+  }*/
 
 }

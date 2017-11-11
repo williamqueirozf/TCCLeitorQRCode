@@ -8,11 +8,24 @@
 
 <ion-content padding>
 <div *ngIf="results">
-<p style="text-align:center; font-size:30px;font-family:arial">{{results.text}}</p>
+	<p style="text-align:center; font-size:30px;font-family:arial">{{results.text}}</p>
 <!--<p>{{results.format}}</p>
+	<p style="text-align:center; font-size:30px;font-family:arial">{{results | json}}</p>
+	<p style="text-align:center; font-size:30px;font-family:arial">{{results.text}}</p>
+	<button ion-button color="positive" ></button>
 <p>{{results.cancelled}}</p>-->
 </div>
-<button ion-button (click)="scanBarcode()" align="center">Escanear QRCODE</button>
 
+
+
+    <button  ion-button color="positive" block icon-right (click)="scanBarcode()" >
+    Escanear QRCODE
+   </button>
 <!--<button ion-button (click)="encode()" >Encode</button>-->
+
+   <ion-footer>
+  <ion-toolbar>
+    <ion-title style="text-align:center">Easyparking 2017 &copy;</ion-title>
+  </ion-toolbar>
+</ion-footer>
 </ion-content>
