@@ -7,6 +7,11 @@ import{BarcodeScanner} from '@ionic-native/barcode-scanner';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { HttpModule } from '@angular/http';//
+import { ServiceProviderInicio } from '../providers/inicio/inicioservice';// tela inicial
+import { Conexaobd } from '../providers/conexao/conexao';// centralizacao url banco de dados
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -14,6 +19,7 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    HttpModule,//   
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -24,7 +30,9 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    Conexaobd,//    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: ServiceProviderInicio, useClass: ServiceProviderInicio},//
     BarcodeScanner
   ]
 })

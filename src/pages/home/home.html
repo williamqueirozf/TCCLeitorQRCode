@@ -7,18 +7,16 @@
 </ion-header>
 
 <ion-content padding>
-<div *ngIf="results">
+<!--<div *ngIf="results">
 	<p style="text-align:center; font-size:30px;font-family:arial">{{results.text}}</p>
-<!--<p>{{results.format}}</p>
+<p>{{results.format}}</p>
 	<p style="text-align:center; font-size:30px;font-family:arial">{{results | json}}</p>
-	<p style="text-align:center; font-size:30px;font-family:arial">{{results.text}}</p>
-	<button ion-button color="positive" ></button>
-<p>{{results.cancelled}}</p>-->
+<p>{{results.cancelled}}</p>
 </div>
+-->
 
 
-
-    <button  ion-button color="positive" block icon-right (click)="scanBarcode()" >
+    <button  ion-button color="positive" block icon-right on-click="presentLoading(scanBarcode());" >
     Escanear QRCODE
    </button>
 <!--<button ion-button (click)="encode()" >Encode</button>-->
