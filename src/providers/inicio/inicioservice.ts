@@ -37,6 +37,17 @@ export class ServiceProviderInicio {
               (res:Response) => {return res.json();}
         );
       }
+
+
+     postDataValorQRcode(parans) {
+        let headers = new Headers({ 'Content-Type' : 'application/x-www-form-urlencoded' });
+        return this.http.post(this.conexaobd.url + this.api + "apiUpdateValorEstacionamento.php", parans, {
+              headers:headers,
+              method:"POST"
+        }).map(
+              (res:Response) => {return res.json();}
+        );
+      }
 /*
       getDataUsuarioId() {
             return this.http.get(this.conexaobd.url + this.api + 'apiRecuperaQrcode.php').map(res=>res.json())

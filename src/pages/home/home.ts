@@ -54,10 +54,26 @@ async scanBarcode(){
             .subscribe(
                   data=>{
                     if(data.permissao === true){
+
+              //essa parte
+              this.service.postDataValorQRcode(this.results)
+                    .subscribe(
+                          data=>{console.log(data.mensage);
+                                //this.getDados();
+                                //console.log('isso aí');
+                          },
+                          err=>console.log('errado')
+                    );
+                  
+
+
+
+
                       //console.log(this.login);
                       //console.log("Perfeito");
                       //console.log(data.id_usuario + " Variavel Banco");
                       //alert('Obrigado ' + data.nome_pessoa + 'Volte Sempre.');
+
                     
                       let alert = this.alertCtrl.create({
                       title: 'Cancela Liberada',
